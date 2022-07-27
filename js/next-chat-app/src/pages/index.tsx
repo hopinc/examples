@@ -26,7 +26,12 @@ export default function Index() {
 		leap.subscribeToChannel(HOP_CHANNEL_NAME);
 
 		return () => {
-			leap.unsubscribeFromChannel(HOP_CHANNEL_NAME);
+			try {
+				leap.unsubscribeFromChannel(HOP_CHANNEL_NAME);
+			} catch {
+				// This will be because hot reloading killed the connection
+				// so we don't need to worry about it (already unsubscribed).
+			}
 		};
 	}, [connectionState]);
 
@@ -56,8 +61,15 @@ export default function Index() {
 						setLoading(false);
 					}
 				}}>
-				<input type="text" value={message} onChange={e => setMessage(e.target.value)} />
-				<button type="submit">Send</button>
+				<input
+					disabled={loading}
+					type="text"
+					value={message}
+					onChange={e => setMessage(e.target.value)}
+				/>
+				<button disabled={loading} type="submit">
+					Send
+				</button>
 			</form>
 		</div>
 	);
