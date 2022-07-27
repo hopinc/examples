@@ -1,0 +1,10 @@
+node_modules
+.yarn/*
+!.yarn/releases
+!.yarn/sdks
+!.yarn/plugins
+.DS_Store
+dist
+_workbench.ts
+.env
+.next
