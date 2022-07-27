@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { useChannelMessage } from "@onehop/react";
+import { useEffect, useState } from "react";
+import { ConnectionState, useChannelMessage, useConnectionState, useLeap } from "@onehop/react";
 import { HOP_CHANNEL_NAME } from "../config";
 import { Message } from "../types";
 
@@ -11,6 +11,24 @@ export default function Index() {
 	useChannelMessage<Message>(HOP_CHANNEL_NAME, "MESSAGE_SEND", message => {
 		setMessages(messages => [...messages, message]);
 	});
+
+	// TODO: useChannelMessage shoudl create a subscription to the channel
+	// and right now it does not. The code below is a workaround but the logic
+	// will eventually be moved to the useChannelMessage hook.
+	const leap = useLeap();
+	const connectionState = useConnectionState();
+
+	useEffect(() => {
+		if (typeof window === "undefined" || connectionState !== ConnectionState.CONNECTED) {
+			return;
+		}
+
+		leap.subscribeToChannel(HOP_CHANNEL_NAME);
+
+		return () => {
+			leap.unsubscribeFromChannel(HOP_CHANNEL_NAME);
+		};
+	}, [connectionState]);
 
 	return (
 		<div>
