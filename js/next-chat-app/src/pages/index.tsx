@@ -13,6 +13,12 @@ export default function Index() {
 		setMessages(messages => [...messages, message]);
 	});
 
+	useEffect(() => {
+		if (!loading) {
+			inputRef.current?.focus();
+		}
+	}, [loading]);
+
 	// TODO: useChannelMessage shoudl create a subscription to the channel
 	// and right now it does not. The code below is a workaround but the logic
 	// will eventually be moved to the useChannelMessage hook.
@@ -54,7 +60,6 @@ export default function Index() {
 						});
 					} finally {
 						setLoading(false);
-						inputRef.current?.focus();
 					}
 				}}>
 				<input
