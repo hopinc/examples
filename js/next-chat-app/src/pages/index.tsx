@@ -52,10 +52,9 @@ export default function Index() {
 							headers: { "Content-Type": "application/json" },
 							body: JSON.stringify({ content: message }),
 						});
-
-						inputRef.current?.focus();
 					} finally {
 						setLoading(false);
+						inputRef.current?.focus();
 					}
 				}}>
 				<input
