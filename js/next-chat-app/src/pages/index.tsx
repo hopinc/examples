@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ConnectionState, useChannelMessage, useConnectionState, useLeap } from "@onehop/react";
 import { HOP_CHANNEL_NAME } from "../config";
 import { Message } from "../types";
@@ -7,6 +7,7 @@ export default function Index() {
 	const [messages, setMessages] = useState<Array<{ content: string; id: string }>>([]);
 	const [message, setMessage] = useState("");
 	const [loading, setLoading] = useState(false);
+	const inputRef = useRef<HTMLInputElement | null>(null);
 
 	useChannelMessage<Message>(HOP_CHANNEL_NAME, "MESSAGE_SEND", message => {
 		setMessages(messages => [...messages, message]);
@@ -39,12 +40,6 @@ export default function Index() {
 		<div>
 			<h1>Next Chat App</h1>
 
-			<ul>
-				{messages.map(message => (
-					<li key={message.id}>{message.content}</li>
-				))}
-			</ul>
-
 			<form
 				onSubmit={async e => {
 					e.preventDefault();
@@ -57,20 +52,30 @@ export default function Index() {
 							headers: { "Content-Type": "application/json" },
 							body: JSON.stringify({ content: message }),
 						});
+
+						inputRef.current?.focus();
 					} finally {
 						setLoading(false);
 					}
 				}}>
 				<input
+					ref={inputRef}
 					disabled={loading}
 					type="text"
 					value={message}
 					onChange={e => setMessage(e.target.value)}
 				/>
+
 				<button disabled={loading} type="submit">
 					Send
 				</button>
 			</form>
+
+			<ul>
+				{messages.map(message => (
+					<li key={message.id}>{message.content}</li>
+				))}
+			</ul>
 		</div>
 	);
 }

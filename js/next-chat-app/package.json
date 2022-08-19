@@ -7,17 +7,17 @@
 		"start": "next start"
 	},
 	"dependencies": {
-		"@onehop/client": "^1.0.8",
-		"@onehop/js": "^1.0.14",
-		"@onehop/react": "^1.0.8",
+		"@onehop/client": "^1.3.1",
+		"@onehop/js": "^1.2.5",
+		"@onehop/react": "^1.3.1",
 		"nanoid": "^4.0.0",
-		"next": "^12.2.3",
+		"next": "^12.2.5",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0"
 	},
 	"devDependencies": {
-		"@types/node": "^18.6.1",
-		"@types/react": "^18.0.15",
+		"@types/node": "^18.7.6",
+		"@types/react": "^18.0.17",
 		"@types/react-dom": "^18.0.6",
 		"typescript": "^4.7.4"
 	}

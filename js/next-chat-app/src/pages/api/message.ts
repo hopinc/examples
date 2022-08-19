@@ -13,7 +13,9 @@ const handler: NextApiHandler = async (req, res) => {
 		id: nanoid(),
 	});
 
-	res.status(200).json({ success: true });
+	res.status(200).json({
+		success: true,
+	});
 };
 
 export default handler;
