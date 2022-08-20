@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { startTransition, useEffect, useRef, useState } from "react";
 import { useChannelMessage } from "@onehop/react";
 import { HOP_CHANNEL_NAME } from "../config";
 import { Message } from "../types";
@@ -36,7 +36,11 @@ export default function Index() {
 							body: JSON.stringify({ content: message }),
 						});
 					} finally {
-						setLoading(false);
+						setMessage("");
+
+						startTransition(() => {
+							setLoading(false);
+						});
 					}
 				}}>
 				<input
