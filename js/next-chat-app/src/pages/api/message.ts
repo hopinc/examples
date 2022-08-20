@@ -8,7 +8,7 @@ const hop = new Hop(process.env.HOP_PROJECT_TOKEN as APIAuthentication);
 const handler: NextApiHandler = async (req, res) => {
 	const { content } = req.body;
 
-	await hop.channels.publishMessage(HOP_CHANNEL_NAME, "MESSAGE_SEND", {
+	await hop.channels.publishMessage(HOP_CHANNEL_NAME, "MESSAGE_CREATE", {
 		content,
 		id: nanoid(),
 	});

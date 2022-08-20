@@ -5,8 +5,6 @@ import { HOP_PROJECT_ID } from "../config";
 
 export default function App({ Component, pageProps }: AppProps) {
 	useEffect(() => {
-		// Check that we are in the browser!
-		// we cannot initialise hop if we are server rendering
 		if (typeof window === "undefined") {
 			return;
 		}
