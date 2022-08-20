@@ -1,17 +1,28 @@
 import { Hop, APIAuthentication } from "@onehop/js";
 import { nanoid } from "nanoid";
 import { NextApiHandler } from "next";
-import { HOP_CHANNEL_NAME } from "../../config";
+import { HOP_CHANNEL_NAME } from "../../utils/config";
+import { Message } from "../../utils/types";
 
 const hop = new Hop(process.env.HOP_PROJECT_TOKEN as APIAuthentication);
 
 const handler: NextApiHandler = async (req, res) => {
-	const { content } = req.body;
+	const { content, author } = req.body;
 
-	await hop.channels.publishMessage(HOP_CHANNEL_NAME, "MESSAGE_CREATE", {
-		content,
+	if (!content || !author) {
+		return res.status(400).json({
+			success: false,
+			message: "Missing `.content` or `.author` field",
+		});
+	}
+
+	const message: Message = {
 		id: nanoid(),
-	});
+		content,
+		author,
+	};
+
+	await hop.channels.publishMessage(HOP_CHANNEL_NAME, "MESSAGE_CREATE", message);
 
 	res.status(200).json({
 		success: true,
