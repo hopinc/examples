@@ -1,4 +1,4 @@
-![./static/hero.jpeg](Hero image)
+![Hero image](./static/hero.jpeg)
 
 This repo houses a few examples of apps built with Hop products. All apps can be deployed directly to Hop with the CLI by running `$ hop deploy`
 
