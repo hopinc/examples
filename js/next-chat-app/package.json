@@ -7,9 +7,9 @@
 		"start": "next start"
 	},
 	"dependencies": {
-		"@onehop/client": "^1.3.4",
-		"@onehop/js": "^1.2.5",
-		"@onehop/react": "^1.3.4",
+		"@onehop/client": "^1.3.6",
+		"@onehop/js": "^1.2.7",
+		"@onehop/react": "^1.3.6",
 		"nanoid": "^4.0.0",
 		"next": "^12.2.5",
 		"react": "^18.2.0",
