@@ -8,7 +8,7 @@ export default function Index() {
 	const [loading, setLoading] = useState(false);
 	const [messages, setMessages] = useState<Array<Message>>([]);
 
-	const [message, setMessage] = useState<Omit<Message, "id">>({
+	const [message, setMessage] = useState<Omit<Message, "id" | "isAdmin">>({
 		author: "",
 		content: "",
 	});
@@ -110,7 +110,8 @@ export default function Index() {
 			<ul>
 				{messages.map(message => (
 					<li key={message.id}>
-						<b>{message.author}</b>: <span>{message.content}</span>
+						<b style={{ color: message.isAdmin ? "gold" : "black" }}>{message.author}</b>:{" "}
+						<span>{message.content}</span>
 					</li>
 				))}
 			</ul>
