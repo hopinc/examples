@@ -1,4 +1,4 @@
-import { useChannelMessage } from "@onehop/react";
+import { useChannelMessage, useReadChannelState } from "@onehop/react";
 import { startTransition, useEffect, useRef, useState } from "react";
 import { HOP_CHANNEL_NAME } from "../utils/config";
 import { getErrorMessage } from "../utils/errors";
@@ -16,8 +16,16 @@ export default function Index() {
 	const inputRef = useRef<HTMLInputElement | null>(null);
 
 	useChannelMessage<Message>(HOP_CHANNEL_NAME, "MESSAGE_CREATE", message => {
-		setMessages(messages => [...messages, message]);
+		setMessages(messages => [message, ...messages]);
 	});
+
+	const { state } = useReadChannelState<{ messages: Message[] }>(HOP_CHANNEL_NAME);
+
+	useEffect(() => {
+		if (messages.length === 0 && state && state.messages.length > 0) {
+			setMessages(state.messages);
+		}
+	}, [state, messages]);
 
 	useEffect(() => {
 		if (!loading) {

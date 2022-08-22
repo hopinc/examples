@@ -109,25 +109,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@onehop/client@npm:^1.3.6":
-  version: 1.3.6
-  resolution: "@onehop/client@npm:1.3.6"
+"@onehop/client@npm:^1.3.7":
+  version: 1.3.7
+  resolution: "@onehop/client@npm:1.3.7"
   dependencies:
-    "@onehop/js": ^1.2.7
-    "@onehop/leap-edge-js": ^1.0.2
+    "@onehop/js": ^1.2.8
+    "@onehop/leap-edge-js": ^1.0.3
     hls.js: ^1.2.1
-  checksum: 52cc249444e44b47fca9654addb8c5a4e35acb8d4abc2f0764f5618d99a7558076d08fb9b9ee9d3c34bd84585c9cdd14f58a44582669aebf871bdce98e02a332
+  checksum: 7457d5d1ce6e9a10777e7bd88ed9bb151da7fbe1c27d8a04588731d258f7f0730ccd2281d8766b941831c667345cbcb9ae6dfaead041bc13f5d0588ddf99a61d
   languageName: node
   linkType: hard
 
-"@onehop/js@npm:^1.2.7":
-  version: 1.2.7
-  resolution: "@onehop/js@npm:1.2.7"
+"@onehop/js@npm:^1.2.8, @onehop/js@npm:^1.2.9":
+  version: 1.2.9
+  resolution: "@onehop/js@npm:1.2.9"
   dependencies:
     "@onehop/json-methods": ^1.1.1
     cross-fetch: ^3.1.5
     zod: ^3.18.0
-  checksum: 55243b2de22eb69274de7f4a5200f34d45dcdc23701446cd5b4f36e2fe9290805934a29e277cb45cb4fa32a375ec696976691c4f05f840a49d9707f02d4571cc
+  checksum: 85269ef17d59056b5c7e95cc6532d648f0d720f814bb7aecad9a2c108216dc9fd1ea1545c55142013b1a426de1a0eb8e0b7df265784edab006154a4f0463da78
   languageName: node
   linkType: hard
 
@@ -138,26 +138,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@onehop/leap-edge-js@npm:^1.0.2":
-  version: 1.0.2
-  resolution: "@onehop/leap-edge-js@npm:1.0.2"
+"@onehop/leap-edge-js@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "@onehop/leap-edge-js@npm:1.0.3"
   dependencies:
     eventemitter3: ^4.0.7
     ws: ^8.8.0
-  checksum: f828feb69c50c8b72f3e15de080fc2f1bc447051dd1b5a4fbd6657f855dfe2e6d5f34177f0fabd93643b701df7bc2f9c3769d62e1a9e371e557e07b44cd9f7aa
+  checksum: 9b3b3e2bd908d585df8950339fe39c379c11b5610a55d5cdaba0e1a51feacb67b030433deb401ff5da3a199d6cf3e9b1bc1a68c61400a43a06267e2b894620a4
   languageName: node
   linkType: hard
 
-"@onehop/react@npm:^1.3.6":
-  version: 1.3.6
-  resolution: "@onehop/react@npm:1.3.6"
+"@onehop/react@npm:^1.3.7":
+  version: 1.3.7
+  resolution: "@onehop/react@npm:1.3.7"
   dependencies:
-    "@onehop/client": ^1.3.6
-    "@onehop/js": ^1.2.7
-    "@onehop/leap-edge-js": ^1.0.2
+    "@onehop/client": ^1.3.7
+    "@onehop/js": ^1.2.8
+    "@onehop/leap-edge-js": ^1.0.3
   peerDependencies:
     react: "*"
-  checksum: 50c8374a2d1ef0be2b7a273510808b29b3072c34f8942cd1a9f4fb15f15c41f680686b28b5deadf455ad69a4414fb6034f5631074dab66787682f0682d40de82
+  checksum: e123d9ced681978150f50b88b89ca4ab0b4885393966f6f353082746b5e56111783d3a419306e1d20d8cf322b9450685075c3000f90975f32b4c4c301430902d
   languageName: node
   linkType: hard
 
@@ -177,10 +177,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^18.7.8":
-  version: 18.7.8
-  resolution: "@types/node@npm:18.7.8"
-  checksum: e0125efefa896083c05f549d93166109959ffdd68cb626aad0d660c0ce9de888fe405b4763b4a3c3e0968560409c272413e0ad07204522543c688e162a617ecb
+"@types/node@npm:^18.7.9":
+  version: 18.7.9
+  resolution: "@types/node@npm:18.7.9"
+  checksum: 691ea1b734c0a39c4fe03c104fed18e0148bda6f2504dd341f84be8153d28e74d8114198d2d064ab7fdd2ece3ee16c60b78eea0101fb004f6e4595a631bc3839
   languageName: node
   linkType: hard
 
@@ -306,11 +306,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "next-chat-app@workspace:js/next-chat-app"
   dependencies:
-    "@onehop/client": ^1.3.6
-    "@onehop/js": ^1.2.7
-    "@onehop/react": ^1.3.6
+    "@onehop/client": ^1.3.7
+    "@onehop/js": ^1.2.9
+    "@onehop/react": ^1.3.7
     "@preconstruct/next": ^4.0.0
-    "@types/node": ^18.7.8
+    "@types/node": ^18.7.9
     "@types/react": ^18.0.17
     "@types/react-dom": ^18.0.6
     nanoid: ^4.0.0
