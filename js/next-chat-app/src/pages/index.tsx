@@ -53,6 +53,10 @@ export default function Index() {
 				onSubmit={async e => {
 					e.preventDefault();
 
+					if (message.content.trim() === "") {
+						return;
+					}
+
 					setLoading(true);
 
 					try {

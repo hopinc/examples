@@ -18,8 +18,8 @@ const handler: NextApiHandler = async (req, res) => {
 
 	const message: Message = {
 		id: nanoid(),
-		content,
-		author,
+		content: content.trim(),
+		author: author.trim(),
 	};
 
 	await hop.channels.publishMessage(HOP_CHANNEL_NAME, "MESSAGE_CREATE", message);
