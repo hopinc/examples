@@ -109,18 +109,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@onehop/client@npm:^1.3.7":
-  version: 1.3.7
-  resolution: "@onehop/client@npm:1.3.7"
+"@onehop/client@npm:^1.3.12":
+  version: 1.3.12
+  resolution: "@onehop/client@npm:1.3.12"
   dependencies:
     "@onehop/js": ^1.2.8
-    "@onehop/leap-edge-js": ^1.0.3
+    "@onehop/leap-edge-js": ^1.0.4
     hls.js: ^1.2.1
-  checksum: 7457d5d1ce6e9a10777e7bd88ed9bb151da7fbe1c27d8a04588731d258f7f0730ccd2281d8766b941831c667345cbcb9ae6dfaead041bc13f5d0588ddf99a61d
+  checksum: a43049f4e802f596851427abc5f7c4fcdb33af976908e028cbf4d10e2ba749ba26c22602937bcd79a4592703576750b4b16bace6d816181c02fe503e0770d7ef
   languageName: node
   linkType: hard
 
-"@onehop/js@npm:^1.2.8, @onehop/js@npm:^1.2.9":
+"@onehop/js@npm:^1.2.8":
   version: 1.2.9
   resolution: "@onehop/js@npm:1.2.9"
   dependencies:
@@ -131,6 +131,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@onehop/js@npm:^1.3.8":
+  version: 1.3.8
+  resolution: "@onehop/js@npm:1.3.8"
+  dependencies:
+    "@onehop/json-methods": ^1.1.2
+    cross-fetch: ^3.1.5
+    zod: ^3.18.0
+  checksum: 7def27f5b0ab66bd265f5ffa753ec049429d841fe4684909805d6bfb921cffd6d8fde6cff7897a8ca8da5594ab5db19105762812dd527ecb43ed25def37dd3d3
+  languageName: node
+  linkType: hard
+
 "@onehop/json-methods@npm:^1.1.1":
   version: 1.1.1
   resolution: "@onehop/json-methods@npm:1.1.1"
@@ -138,26 +149,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@onehop/leap-edge-js@npm:^1.0.3":
-  version: 1.0.3
-  resolution: "@onehop/leap-edge-js@npm:1.0.3"
-  dependencies:
-    eventemitter3: ^4.0.7
-    ws: ^8.8.0
-  checksum: 9b3b3e2bd908d585df8950339fe39c379c11b5610a55d5cdaba0e1a51feacb67b030433deb401ff5da3a199d6cf3e9b1bc1a68c61400a43a06267e2b894620a4
+"@onehop/json-methods@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "@onehop/json-methods@npm:1.1.2"
+  checksum: 296ffa0c5ee310cff568ddaadc08d739a483092a7866d5ce0aba7164b2fe96e533f9212eeb8d74457281291561b7553cd2794d43f64f5cfffcf09331ce88e922
   languageName: node
   linkType: hard
 
-"@onehop/react@npm:^1.3.7":
-  version: 1.3.7
-  resolution: "@onehop/react@npm:1.3.7"
+"@onehop/leap-edge-js@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "@onehop/leap-edge-js@npm:1.0.4"
   dependencies:
-    "@onehop/client": ^1.3.7
+    eventemitter3: ^4.0.7
+    ws: ^8.8.0
+  checksum: a243783f310c7a3bf776cb6888aec66a56db98a0069cea58f3044462a002ea208594c0e3cfb62a9cdadca4f49b31697e19a73c5c68b6541703a9329ff07706a3
+  languageName: node
+  linkType: hard
+
+"@onehop/react@npm:^1.3.12":
+  version: 1.3.12
+  resolution: "@onehop/react@npm:1.3.12"
+  dependencies:
+    "@onehop/client": ^1.3.12
     "@onehop/js": ^1.2.8
-    "@onehop/leap-edge-js": ^1.0.3
+    "@onehop/leap-edge-js": ^1.0.4
   peerDependencies:
     react: "*"
-  checksum: e123d9ced681978150f50b88b89ca4ab0b4885393966f6f353082746b5e56111783d3a419306e1d20d8cf322b9450685075c3000f90975f32b4c4c301430902d
+  checksum: 88895bea491ad74e8774fd080111635c941f4ca177ce94644f40b5bc68acd340759719d04e69a4c84b3d926597de85147439765fdc63b18d1dc5721f18d521f2
   languageName: node
   linkType: hard
 
@@ -177,10 +195,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^18.7.9":
-  version: 18.7.9
-  resolution: "@types/node@npm:18.7.9"
-  checksum: 691ea1b734c0a39c4fe03c104fed18e0148bda6f2504dd341f84be8153d28e74d8114198d2d064ab7fdd2ece3ee16c60b78eea0101fb004f6e4595a631bc3839
+"@types/node@npm:^18.7.14":
+  version: 18.7.14
+  resolution: "@types/node@npm:18.7.14"
+  checksum: 99cf28ff854100158de875cca23c7acc3cc01dfee526a52b90b7f36767c821bcbaf2be0a98a70f06f3b78f3c60639168ff949d725b61e2e124f9f71f1fb8043d
   languageName: node
   linkType: hard
 
@@ -211,14 +229,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^18.0.17":
-  version: 18.0.17
-  resolution: "@types/react@npm:18.0.17"
+"@types/react@npm:^18.0.18":
+  version: 18.0.18
+  resolution: "@types/react@npm:18.0.18"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: 18cae64f5bfd6bb58fbd8ee2ba52ec82de844f114254e26de7b513e4b86621f643f9b71d7066958cd571b0d78cb86cbceda449c5289f9349ca573df29ab69252
+  checksum: 6d72d35ab3eecf382a5e0f225923f5a2c753045fce02e4e29713f36c99a24f0f770666a49dde96167f37c86271f93339d1b7e2b8969d011b137a9ebd24ee6806
   languageName: node
   linkType: hard
 
@@ -306,18 +324,18 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "next-chat-app@workspace:js/next-chat-app"
   dependencies:
-    "@onehop/client": ^1.3.7
-    "@onehop/js": ^1.2.9
-    "@onehop/react": ^1.3.7
+    "@onehop/client": ^1.3.12
+    "@onehop/js": ^1.3.8
+    "@onehop/react": ^1.3.12
     "@preconstruct/next": ^4.0.0
-    "@types/node": ^18.7.9
-    "@types/react": ^18.0.17
+    "@types/node": ^18.7.14
+    "@types/react": ^18.0.18
     "@types/react-dom": ^18.0.6
     nanoid: ^4.0.0
     next: ^12.2.5
     react: ^18.2.0
     react-dom: ^18.2.0
-    typescript: ^4.7.4
+    typescript: ^4.8.2
   languageName: unknown
   linkType: soft
 
@@ -487,23 +505,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^4.7.4":
-  version: 4.7.4
-  resolution: "typescript@npm:4.7.4"
+"typescript@npm:^4.8.2":
+  version: 4.8.2
+  resolution: "typescript@npm:4.8.2"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 5750181b1cd7e6482c4195825547e70f944114fb47e58e4aa7553e62f11b3f3173766aef9c281783edfd881f7b8299cf35e3ca8caebe73d8464528c907a164df
+  checksum: 7f5b81d0d558c9067f952c7af52ab7f19c2e70a916817929e4a5b256c93990bf3178eccb1ac8a850bc75df35f6781b6f4cb3370ce20d8b1ded92ed462348f628
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.7.4#~builtin<compat/typescript>":
-  version: 4.7.4
-  resolution: "typescript@patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=f456af"
+"typescript@patch:typescript@^4.8.2#~builtin<compat/typescript>":
+  version: 4.8.2
+  resolution: "typescript@patch:typescript@npm%3A4.8.2#~builtin<compat/typescript>::version=4.8.2&hash=f456af"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 9096d8f6c16cb80ef3bf96fcbbd055bf1c4a43bd14f3b7be45a9fbe7ada46ec977f604d5feed3263b4f2aa7d4c7477ce5f9cd87de0d6feedec69a983f3a4f93e
+  checksum: 6f49363af8af2fe480da1d5fa68712644438785208b06690a3cbe5e7365fd652c3a0f1e587bc8684d78fb69de3dde4de185c0bad7bb4f3664ddfc813ce8caad6
   languageName: node
   linkType: hard
 
