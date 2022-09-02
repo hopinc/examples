@@ -1,4 +1,4 @@
-import { Hop, APIAuthentication } from "https://esm.sh/@onehop/js";
+import { Hop, APIAuthentication } from "https://esm.sh/@onehop/js@1.3.15";
 import * as dotenv from "https://deno.land/x/dotenv@v3.2.0/mod.ts";
 
 const { HOP_API_KEY } = dotenv.config({
