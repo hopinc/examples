@@ -7,5 +7,6 @@ node_modules
 dist
 _workbench.ts
 .env
+.env.defaults
 .next
 hop.yml
